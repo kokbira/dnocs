@@ -5,6 +5,7 @@ Desenvolvimento assistido por Microsoft Copilot.
 Imagens geradas com DALL-E
 
 Ajuda
+
 Os Portais gov.br utilizam o componente FontAwesome de use.fontawesome.com/css/all.css, porém um bloqueio de setembro/2024 de acesso de algumas operadoras impede que a rede de algumas instituições acesse tal endereço, o que gera um lag no carregamento por cada acesso a esses portais nos navegadores de mais de 30 segundos e a falta de exibição de alguns ícones, como o item de menu dos portais.
 
 Esta extensão é uma solução de contorno ao problema substituindo o css do FontAwesome para outro endereço (que deve obedecer o CORS), como a URL default https://sso.acesso.gov.br/assets/govbr/fontawesome/css/all.min.css, mas que resolverá apenas a exibição dos ícones de FontAwesome.
@@ -12,6 +13,7 @@ Esta extensão é uma solução de contorno ao problema substituindo o css do Fo
 Para solucionar o lag de carregamento, deve-se forçar o bloqueio de use.fontawesome.com/css/all.css (por exemplo DNS ou firewall). Assim, o navegador não alcança de imediato a localização e logo em seguida o css é alterado.
 
 Licença
+
 The MIT License (MIT)
 
 Copyright (c) 2024 Serviço de Tecnologia da Informação - STI / Departamento
