@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Configurações da Extensão</title>
+  <link type="text/css" rel="stylesheet" href="../css/tudo.css">
+</head>
+<body class="bd">
+  <div class="container">
+    <h1>Configurações da Extensão</h1>
+    <label class="lb" for="cssUrl">URL do CSS:</label>
+    <input class="ip" type="text" id="cssUrl" placeholder="https://sso.acesso.gov.br/assets/govbr/fontawesome/css/all.min.css">
+    <button class="bt" id="test" disabled>Testar URL</button>
+    <p class="note">A URL fornecida deve obedecer às regras de CORS (Cross-Origin Resource Sharing). Isso significa que o servidor deve permitir explicitamente o acesso de origens diferentes, configurando os cabeçalhos HTTP adequados. Para liberar o acesso, adicione os seguintes cabeçalhos no servidor:</p>
+    <pre><code>
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type
+    </code></pre>
+    <hr>
+    <p class="current-url">URL atual: <span id="currentUrl"></span></p>
+    <hr>
+    <p class="current-url">Lista das últimas URLs usadas:</p>
+    <ul id="url-list"></ul>
+    <button id="import">Importar Lista...</button>
+    <button id="export">Exportar Lista...</button>
+    <button id="clear">Apagar Lista...</button>
+    <a class="lk" href="sobre.htm" target="_blank">Sobre essa extensão e ajuda...</a>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Resultado do Teste de URL</h2>
+      <p id="modal-results"></p>
+      <button id="modal-save" disabled>✔ Aplicar a URL</button>
+      <button id="modal-force-save">❗✔ Aplicar a URL Mesmo Assim</button>
+    </div>
+  </div>
+
+  <script src="../js/opcoes.consts.js"></script>
+  <script src="../js/opcoes.escutadores1.js"></script>
+  <script src="../js/opcoes.escutadores2.js"></script>
+  <script src="../js/opcoes.escutadores3.js"></script>
+  <script src="../js/opcoes.funcs.js"></script>
+
+</body>
+</html>

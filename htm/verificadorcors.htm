@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Verificador CORS</title>
+  <link type="text/css" rel="stylesheet" href="../css/tudo.css">
+</head>
+<body class="bd">
+  <div class="container">
+    <h1>Verificador CORS</h1>
+    <label class="lb" for="url">URL:</label>
+    <input class="ip" type="text" id="url" placeholder="https://www.dnocs.gov.br/faalt/css/all.css">
+    <button class="bt" id="check">Verificar CORS</button>
+    <h2>Resultados:</h2>
+    <pre class="ccpr" id="results"></pre>
+  </div>
+<script>
+  document.getElementById('check').addEventListener('click', () => {
+    const url = document.getElementById('url').value;
+    document.getElementById('results').textContent = "Checando " + url + " ...\n";
+    fetch(url, { method: 'HEAD' })
+      .then(response => {
+        document.getElementById('results').textContent += "- resultado: " + response.headers.toString();
+console.log(...response.headers);
+        const results = `
+          Access-Control-Allow-Origin: ${response.headers.get('Access-Control-Allow-Origin')}
+          Access-Control-Allow-Methods: ${response.headers.get('Access-Control-Allow-Methods')}
+          Access-Control-Allow-Headers: ${response.headers.get('Access-Control-Allow-Headers')}
+        `;
+        document.getElementById('results').textContent += results;
+      })
+      .catch(error => {
+        document.getElementById('results').textContent = 'Erro ao acessar a URL: ' + error;
+      });
+  });
+</script>
+
+</body>
+</html>

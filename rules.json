@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://sso.acesso.gov.br/assets/govbr/fontawesome/css/all.min.css"
+      }
+    },
+    "condition": {
+      "urlFilter": "use.fontawesome.com/releases/v6.4.2/css/all.css",
+      "resourceTypes": ["stylesheet"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "https://use.fontawesome.com/releases/v6.4.2/css/all.css",
+      "resourceTypes": ["stylesheet"]
+    }
+  }
+]
