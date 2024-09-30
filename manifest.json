@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DNOCS - Substituição de carregamento de fontawesome",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Substitui o carregamento do fontawesome nas páginas do domínio gov.br antes do carregamento da página.",
   "permissions": [
     "activeTab",
@@ -18,17 +18,17 @@
     }
   ],
   "icons": {
-    "16": "img/icon-16.png",
-    "48": "img/icon-48.png",
-    "128": "img/icon-128.png"
+    "16": "img/subst-fontawesome-16.png",
+    "48": "img/subst-fontawesome-48.png",
+    "128": "img/subst-fontawesome-128.png"
   },
   "options_page": "htm/opcoes.htm",
   "action": {
     "default_popup": "htm/opcoes.htm",
     "default_icon": {
-      "16": "img/icon-16.png",
-      "48": "img/icon-48.png",
-      "128": "img/icon-128.png"
+      "16": "img/subst-fontawesome-16.png",
+      "48": "img/subst-fontawesome-48.png",
+      "128": "img/subst-fontawesome-128.png"
     }
   }
 }
